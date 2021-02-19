@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     //Mark: Stored propertie
-   @State var SomeText = "Hello, World!"
+   @State var someText = "Hello, World!"
     
     var body: some View {
         
         VStack {
             
-        Text(SomeText)
+        Text(someText)
             .padding()
             .onAppear(){
     
