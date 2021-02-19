@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-   @State var someText = "Hello, World"
+    
+    //Mark: Stored propertie
+   @State var SomeText = "Hello, World!"
     
     var body: some View {
         
         VStack {
             
-        Text(someText)
+        Text(SomeText)
             .padding()
             .onAppear(){
     
@@ -43,7 +45,7 @@ struct ContentView: View {
                 return
 
             }
-            if let DecodedAsynchroQuote = try? JSONDecoder().decode(Asynchronous.self, from: quote) {
+            if let DecodedAsynchronousQuote = try? JSONDecoder().decode(AsynchronousQuote.self, from: Quote) {
 
                 // DEBUG:
                 print("Quote data decoded from JSON successfully")
@@ -55,7 +57,9 @@ struct ContentView: View {
 
                 // Now, update the UI on the main thread
                 DispatchQueue.main.async {
-                    someText = DecodedAsynchronousQuote.quote
+                    
+                    SomeText = DecodedAsynchronousQuote.quote
+                
                 }
 
             } else {
