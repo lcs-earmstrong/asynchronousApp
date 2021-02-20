@@ -12,7 +12,6 @@
 		B877B42D25E023EA00E2EBEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B877B42C25E023EA00E2EBEE /* Assets.xcassets */; };
 		B877B43025E023EA00E2EBEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B877B42F25E023EA00E2EBEE /* Preview Assets.xcassets */; };
 		B877B43925E028BB00E2EBEE /* Asynchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877B43825E028BA00E2EBEE /* Asynchronous.swift */; };
-		B877B45B25E159D000E2EBEE /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877B45A25E159CF00E2EBEE /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		B877B42F25E023EA00E2EBEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B877B43125E023EA00E2EBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B877B43825E028BA00E2EBEE /* Asynchronous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asynchronous.swift; sourceTree = "<group>"; };
-		B877B45A25E159CF00E2EBEE /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				B877B42C25E023EA00E2EBEE /* Assets.xcassets */,
 				B877B43125E023EA00E2EBEE /* Info.plist */,
 				B877B42E25E023EA00E2EBEE /* Preview Content */,
-				B877B45A25E159CF00E2EBEE /* SearchBarView.swift */,
 			);
 			path = asynchronousApp;
 			sourceTree = "<group>";
@@ -144,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B877B45B25E159D000E2EBEE /* SearchBarView.swift in Sources */,
 				B877B43925E028BB00E2EBEE /* Asynchronous.swift in Sources */,
 				B877B42B25E023E500E2EBEE /* ContentView.swift in Sources */,
 				B877B42925E023E500E2EBEE /* asynchronousAppApp.swift in Sources */,
