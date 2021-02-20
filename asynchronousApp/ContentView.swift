@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     //Mark: Stored propertie
-   @State var someText = "Hello, World!"
+    @State var someText = "Hello"
     
     var body: some View {
         
@@ -22,13 +22,17 @@ struct ContentView: View {
     
     fetchQuote ()
             }
+            Button("Get another quote"){
+                fetchQuote()
             }
+            }
+        
     }
-}
+
 
     func fetchQuote() {
         
-        let url = URL (string: "https://forismatic.com/en/")!
+        let url = URL (string: "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en")!
         
         var request = URLRequest(url: url)
         request.setValue("application/json",
@@ -45,26 +49,26 @@ struct ContentView: View {
                 return
 
             }
-            if let DecodedAsynchronousQuote = try? JSONDecoder().decode(AsynchronousQuote.self, from: Quote) {
+            if let DecodedAsynchronousQuote = try? JSONDecoder().decode(AsynchronousQuote.self, from:  Quote) {
 
                 // DEBUG:
                 print("Quote data decoded from JSON successfully")
                 
                 print("""
                     The Quote is:
-                    \(DecodedAsynchronousQuote.quote)
+                    \(DecodedAsynchronousQuote.quoteText)
                     """)
 
                 // Now, update the UI on the main thread
                 DispatchQueue.main.async {
                     
-                    SomeText = DecodedAsynchronousQuote.quote
+                    someText = DecodedAsynchronousQuote.quoteText
                 
                 }
 
             } else {
 
-                print("Could not decode JSON into an instance of the DadJoke structure.")
+                print("Could not decode JSON into an instance of the fetchQuote structure.")
 
             }
 
@@ -74,6 +78,7 @@ struct ContentView: View {
         // run, otherwise.
 
     }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
